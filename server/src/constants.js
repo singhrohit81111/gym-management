@@ -1,3 +1,8 @@
 const DB_NAME = "gym";
 
-module.exports = { DB_NAME };
+const OPTIONS = {
+  httpOnly: false,
+  secure: false,
+};
+
+module.exports = { DB_NAME, OPTIONS };
