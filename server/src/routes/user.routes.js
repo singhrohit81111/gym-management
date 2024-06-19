@@ -7,11 +7,12 @@ const {
   getCurrentUser,
   logout,
 } = require("../controllers/user.controllers");
+const verifyJWT = require("../middlewares/auth.middleware");
 
-router.route("/login").get(login);
+router.route("/login").post(login);
 router.route("/register").post(register);
-router.route("/update-password").post(updatePassword);
-router.route("/current-user").get(getCurrentUser);
-router.route("/logout").post(logout);
+router.route("/update-password").post(verifyJWT, updatePassword);
+router.route("/current-user").get(verifyJWT, getCurrentUser);
+router.route("/logout").post(verifyJWT, logout);
 
 module.exports = router;
