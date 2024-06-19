@@ -6,7 +6,7 @@ const {
   updatePassword,
   getCurrentUser,
   logout,
-} = require("../controllers/user.controllers");
+} = require("../controllers/auth.controllers");
 const verifyJWT = require("../middlewares/auth.middleware");
 
 router.route("/login").post(login);
