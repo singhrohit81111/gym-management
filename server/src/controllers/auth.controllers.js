@@ -1,6 +1,4 @@
-const ApiError = require("../utils/ApiError");
 const asyncHandler = require("../utils/asyncHandler");
-const User = require("../models/user.model");
 const { OPTIONS } = require("../constants");
 const { tokenService, authService } = require("../services");
 

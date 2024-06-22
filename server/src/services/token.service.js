@@ -1,4 +1,4 @@
-const User = require("../models/user.model");
+const User = require("../models");
 
 const generateRefreshAndAccessToken = async (userID) => {
   const user = await User.findOne({ _id: userID });
