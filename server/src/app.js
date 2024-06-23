@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const errorHandler = require("./middlewares/error.middleware");
-const authRoutes = require("./routes/auth.routes");
+const authRoutes = require("./routes/v1/auth.routes");
 
 app.use(
   cors({
